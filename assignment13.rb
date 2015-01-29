@@ -1,6 +1,6 @@
 puts "Guess a number from 1 to 15"
 
-a = 4
+a = rand(1...15)
 
 r = gets.chomp.to_i
 
