@@ -24,4 +24,4 @@ qs.each do |q|
   s += 1
 end
 
-qs.close
+questions.close
