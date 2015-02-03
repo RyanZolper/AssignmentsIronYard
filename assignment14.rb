@@ -9,14 +9,13 @@ class PigLatin
   def self.pluralpig(text)
 
     arr = text.split
-    arr.each do |a|
-      if a[0] == VOWELS
+    arr.each do|a|
+      if VOWELS.include? a[0].downcase
         pigatized_text = a + "way"
       else
-        pigatized_text = a + a.slice!(0) + "ay"
+        pigatized_text = a.downcase.chars.rotate.join + "ay"
       end
-      print pigatized_text
-      print " "
+    return pigatized_text + " "
     end
 
   end
