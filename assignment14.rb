@@ -7,7 +7,8 @@ class PigLatin
 
 
   def self.pluralpig(text)
-
+    pigatized_array = Array.new
+    x = 0
     arr = text.split
     arr.each do|a|
       if VOWELS.include? a[0].downcase
@@ -15,9 +16,10 @@ class PigLatin
       else
         pigatized_text = a.downcase.chars.rotate.join + "ay"
       end
-    return pigatized_text + " "
+    pigatized_array[x] = pigatized_text
+    x += 1
     end
-
+  return pigatized_array.join(" ")
   end
 
 end

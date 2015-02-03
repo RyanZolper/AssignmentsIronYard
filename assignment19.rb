@@ -33,4 +33,4 @@ phrase = gets.chomp
 puts phrase.truncate(20)
 
 ary = ["How", "are", "you?"]
-puts ary.pack("A4A4A4")
+puts ary.join(" ")
