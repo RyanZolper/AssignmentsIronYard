@@ -14,12 +14,22 @@ class Person
   require 'active_support'
   require 'active_support/all'
 
+  def bd(bdinput)
+    @birthday = Date.parse(bdinput)
+  end
+
+  count = 0
+
+  @@trynacount = 0
+
+
+  def self.personcount
+    @@trynacount +=1
+  end
 
 
 
-
-
-  def age(ageinput)
+  def findage(ageinput)
       inputdate = Date.parse(ageinput)
       today = Date.current
       yourage = today.strftime("%Y").to_i - inputdate.strftime("%Y").to_i
@@ -29,4 +39,26 @@ class Person
   end
 
 
+end
+
+
+nameinput = "nothing"
+
+loop do
+
+  puts "Hey man, what's your name?"
+  nameinput = gets.chomp
+  break if nameinput == '\q'
+  p = Person.new
+  p.name(nameinput)
+  puts "Hello #{p.first_name}"
+  puts "What is your birthday? (YYYY-MM-DD)"
+  bdinput = gets.chomp
+  p.bd(bdinput)
+  p.findage(bdinput)
+  puts "First name: #{p.first_name}"
+  puts "Last name: #{p.last_name}"
+  puts "Birthday: #{p.birthday}"
+  puts "Age: #{p.age}"
+  puts "Person #: #{Person.personcount}"
 end
