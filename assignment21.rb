@@ -27,9 +27,14 @@ class Person
     @@trynacount +=1
   end
 
-
-
   def findage(ageinput)
+    CalculateAge(ageinput)
+  end
+
+
+private
+
+  def CalculateAge(ageinput)
       inputdate = Date.parse(ageinput)
       today = Date.current
       yourage = today.strftime("%Y").to_i - inputdate.strftime("%Y").to_i
