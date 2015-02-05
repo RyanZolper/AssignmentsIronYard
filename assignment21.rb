@@ -28,13 +28,13 @@ class Person
   end
 
   def findage
-    CalculateAge
+    calculateAge
   end
-
 
 private
 
-  def CalculateAge
+
+  def calculateAge
     dob = Date.current - @birthday
     age = dob.to_i / 365
   end
