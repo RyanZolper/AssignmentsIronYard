@@ -1,5 +1,5 @@
 class Person
-  attr_reader :first_name, :last_name, :age
+  attr_reader :first_name, :last_name
   attr_accessor :birthday
 
 
@@ -27,20 +27,16 @@ class Person
     @@trynacount +=1
   end
 
-  def findage(ageinput)
-    CalculateAge(ageinput)
+  def findage
+    CalculateAge
   end
 
 
 private
 
-  def CalculateAge(ageinput)
-      inputdate = Date.parse(ageinput)
-      today = Date.current
-      yourage = today.strftime("%Y").to_i - inputdate.strftime("%Y").to_i
-      bdthisyear = today.strftime("%Y") + "-" + inputdate.strftime("%m") + "-" + inputdate.strftime("%d")
-      yourage -= 1  if today < Date.parse(bdthisyear)
-      @age = yourage
+  def CalculateAge
+    dob = Date.current - @birthday
+    age = dob.to_i / 365
   end
 
 
@@ -60,10 +56,9 @@ loop do
   puts "What is your birthday? (YYYY-MM-DD)"
   bdinput = gets.chomp
   p.bd(bdinput)
-  p.findage(bdinput)
   puts "First name: #{p.first_name}"
   puts "Last name: #{p.last_name}"
   puts "Birthday: #{p.birthday}"
-  puts "Age: #{p.age}"
+  puts "Age: #{p.findage}"
   puts "Person #: #{Person.personcount}"
 end

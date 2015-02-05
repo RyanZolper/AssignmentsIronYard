@@ -2,10 +2,10 @@ class String
   VOWELS =  %w(a e i o u)
 
 
-  def self.pluralpig(text)
+  def pigatize
     pigatized_array = Array.new
     x = 0
-    arr = text.split
+    arr = self.split
     arr.each do|a|
       if VOWELS.include? a[0].downcase
         pigatized_text = a + "way"
@@ -20,7 +20,7 @@ class String
 
 end
 
-puts "Please enter a word or phrase and I will translate to pig latin"
-text = gets.chomp
+#puts "Please enter a word or phrase and I will translate to pig latin"
+#text = gets.chomp
 
-puts "Pigatized: #{String.pluralpig(text)}"
+#puts "Pigatized: #{text.pigatize}"
