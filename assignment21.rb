@@ -1,4 +1,4 @@
-
+load 'person.rb'
 
 
 nameinput = "nothing"
