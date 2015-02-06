@@ -1,3 +1,6 @@
+load 'invoiceitem.rb'
+load 'invoice.rb'
+
 x = 0
 
 itemarray = Array.new
