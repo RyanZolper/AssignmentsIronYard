@@ -16,13 +16,13 @@ loop do
   item.product_name = name
   puts "Enter sales price: (Ex: '24.50 or 12')"
   pretax = gets.chomp
-  item.sp(pretax)
+  item.sale_price = pretax.to_i
   puts "Enter quantity:"
   quant = gets.chomp
-  item.qn(quant)
+  item.quantity = quant.to_i
   puts "Enter tax percentage (Ex: '7')"
   tpct = gets.chomp
-  item.tp(tpct)
+  item.tax_percentage = tpct.to_f / 100
   itemarray[x] = item
   x += 1
   puts "Name :#{item.product_name}"
