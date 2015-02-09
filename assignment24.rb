@@ -24,10 +24,12 @@ loop do
   a += 1
 end
 
-empary.each do |a|
-  puts a.join(" ")
-end
+newcomp.employees = empary
+
+newcomp.showemps
+
 puts "Enter employees's ID to fire: "
 fired = gets.chomp
-empary.delete_if {|emp| emp[1] == "ID ##{fired}" }
-puts "These guys made it: #{empary}"
+newcomp.employees.delete_if {|emp| emp[1] == "ID ##{fired}" }
+puts "These guys made it: "
+newcomp.showemps
