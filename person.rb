@@ -23,9 +23,14 @@ class Person
   @@trynacount = 0
 
 
-  def self.personcount
+  def initialize
     @@trynacount +=1
   end
+
+  def self.personcount
+    @@trynacount
+  end
+
 
   def findage
     calculateAge
