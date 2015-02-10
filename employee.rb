@@ -1,5 +1,5 @@
 class Employee
-  attr_accessor :name, :city
+  attr_accessor :name, :city, :id
 
 
 

@@ -8,7 +8,6 @@ puts "Please enter your company's location: "
 newcomp.city = gets.chomp
 
 x = 0
-a = 0
 empary = Array.new
 
 loop do
@@ -19,9 +18,9 @@ loop do
   puts "Please enter a candidate's name to hire them: "
   newguy.name = gets.chomp
   x += 1
-  puts "Hired: #{newguy.name}! ID ##{x}"
-  empary[a] = [newguy.name, "ID ##{x}"]
-  a += 1
+  newguy.id = x
+  puts "Hired: #{newguy.name}! ID ##{newguy.id}"
+  empary.push(newguy)
 end
 
 newcomp.employees = empary
@@ -30,6 +29,6 @@ newcomp.showemps
 
 puts "Enter employees's ID to fire: "
 fired = gets.chomp
-newcomp.employees.delete_if {|emp| emp[1] == "ID ##{fired}" }
+newcomp.employees.delete_if {|emp| emp.id == fired.to_i }
 puts "These guys made it: "
 newcomp.showemps
