@@ -7,6 +7,11 @@ class Post
 
   def initialize
     @date = Date.current
+    @name = ''
+    while @name.length < 1
+      print 'Please enter a post name: '
+      @name = gets.chomp
+    end
   end
 
   def wordcount

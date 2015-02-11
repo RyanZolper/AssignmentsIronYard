@@ -3,8 +3,13 @@ class Blog
 
   def initialize
     @posts = []
+    @name = ''
+    while @name.length < 1
+      print 'Please enter a blog name: '
+      @name = gets.chomp
+    end
   end
-  
+
 
 
 
