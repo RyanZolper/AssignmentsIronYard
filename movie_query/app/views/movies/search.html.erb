@@ -1,2 +1,35 @@
-<h1>Movie: <%= @title.upcase%></h1>
-<p>Synopsis: <%= @synopsis%></p>
+<head>
+  <title><%= @title.upcase%></title>
+</head>
+
+<body>
+  <h1>Movie: <%= @title.upcase%></h1>
+  <br>
+  <div class="row">
+    <div class="col-md-8">
+        <p>Synopsis:</p><br><d> <%= @synopsis%></d>
+    </div>
+    <div class="col-md-4">
+      <dl>
+        <br>
+        <dt>Main Cast: </dt>
+        <dd><%= @cast.join(", ") + "."%>
+        <br><br>
+        <dt>Runtime: </dt>
+        <dd><%= @time.to_s + " minutes"%></dd>
+        <br>
+        <dt>Critic Rating: </dt>
+        <dd><%= @critic.to_s + "/100"%></dd>
+        <br>
+        <dt>Audience Rating: </dt>
+        <dd><%= @audience.to_s + "/100"%></dd>
+        <img src=<%= @posterurl%> alt="Whoops!" height="345" />
+      </dl>
+    </div>
+
+  </div>
+
+
+
+  <br>
+</body>

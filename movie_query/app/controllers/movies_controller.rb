@@ -8,9 +8,24 @@ class MoviesController < ApplicationController
     jsonoutput = Net::HTTP.get(uri)
 
     file = JSON.parse(jsonoutput)
-    @moviesarray = file["movies"]
-    movie1hash = @moviesarray[0]
+    moviesarray = file["movies"]
+    movie1hash = moviesarray[0]
     @synopsis = movie1hash["synopsis"]
+    castraw = movie1hash["abridged_cast"]
+    castary = Array.new
+    castraw.each do |a|
+      castary << a["name"]
+    end
+    @cast = castary
+
+
+
+    posterhash = movie1hash["posters"]
+    @posterurl = posterhash["detailed"]
+    @time = movie1hash["runtime"]
+    ratings = movie1hash["ratings"]
+    @critic = ratings["critics_score"]
+    @audience = ratings["audience_score"]
 
   end
 
