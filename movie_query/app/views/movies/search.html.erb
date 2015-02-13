@@ -1,17 +1,18 @@
 <head>
-  <title><%= @title.upcase%></title>
+  <title><%= @movie.upcase%></title>
+  <h1>Movie: <%= @movie.upcase%></h1>
 </head>
 
 <body>
-  <h1>Movie: <%= @title.upcase%></h1>
-  <br>
+
+
   <div class="row">
     <div class="col-md-8">
         <p>Synopsis:</p><br><d> <%= @synopsis%></d>
     </div>
     <div class="col-md-4">
       <dl>
-        <br>
+        <br><br><br>
         <dt>Main Cast: </dt>
         <dd><%= @cast.join(", ") + "."%>
         <br><br>
@@ -23,6 +24,7 @@
         <br>
         <dt>Audience Rating: </dt>
         <dd><%= @audience.to_s + "/100"%></dd>
+        <br>
         <img src=<%= @posterurl%> alt="Whoops!" height="345" />
       </dl>
     </div>

@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
     end
     @cast = castary
 
-
+    @movie = movie1hash["title"]
 
     posterhash = movie1hash["posters"]
     @posterurl = posterhash["detailed"]
