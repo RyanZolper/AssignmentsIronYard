@@ -1,0 +1,67 @@
+<head>
+  <Title>The Zolper Blog</title>
+    <div class="row">
+      <div class="col-md-5">
+        <h1>Welcome to "The Zolper Blog"!</h1>
+      </div>
+      <div class="col-md-4"><br>
+        <div class="btn-group btn-group-lg">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            Posts <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="post1">How to Eat Fried Rice</a></li>
+            <li><a href="post2">Car Buyer's Advice</a></li>
+            <li><a href="post3">See the Northern Lights</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col-md-8">
+
+      <h4>Introduction:</h4>
+      <h2>
+      Hello, and welcome to my blog. This blog is one of my first experiments with Rails. It is my second app, and far from my last.
+      Please navigate through the posts using the "posts" dropdown menu above and the "About the Author" page using the link below. Also check out some recent #RubyonRails tweets in the embedded Twitter feed to the right or perform a Google search below! <br><br>
+    </h2><h4>Support the Author:</h4>
+      <h2>If you really enjoy my Rails work please visit <a href="http://www.suzukicycles.com/Product%20Lines/Cycles/Products/GSX-R600/2014/GSXR600.aspx">this page</a> for more information on what motivates me and where you can spend your money to keep me working!
+      </h2><br>
+      <br>
+
+
+      <h3><a href="aboutme">About the Author</a></h3><br>
+      <form method="get" action="http://www.google.com/search">
+
+        <div style="border:2px solid black;padding:4px;width:15em;">
+          <table border="0" align="center" cellpadding="0">
+            <tr><td>
+              <input type="text"   name="q" size="25" style="color:#808080;"
+              maxlength="255" value="Google Search"
+              onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+              <input type="submit" value="Go!" />
+              </td></tr>
+            </table>
+          </div>
+
+        </form>
+    </div>
+    <div class="col-md-4">
+      <a class="twitter-timeline" href="https://twitter.com/hashtag/rubyonrails" data-widget-id="566306578547372032">#rubyonrails Tweets. This should be embedded. Refresh if it doesn't display.</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      </script>
+    </div>
+  </div>
+
+
+
+
+
+
+</body>
