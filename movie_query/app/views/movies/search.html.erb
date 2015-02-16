@@ -12,7 +12,13 @@
     </div>
     <div class="col-md-4">
       <dl>
-        <br><br><br>
+
+        <%= form_tag(movies_search_path, method: "get") do %>
+        <%= label_tag(:q, "Search Movies:") %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Search") %>
+        <% end %>
+        <br>
         <dt>Main Cast: </dt>
         <dd><%= @cast.join(", ") + "."%>
         <br><br>

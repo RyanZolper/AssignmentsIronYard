@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   def search
 
-    @title = params["title"]
+    @title = params[:q]
 
     uri = URI("http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=3w4er6dzz8w23ct8jhhbbmvt&q=#{@title}")
 
@@ -29,4 +29,13 @@ class MoviesController < ApplicationController
 
   end
 
+  def home
+    def intialize
+      @input = Input.new
+    end
+
+
+
+
+  end
 end
