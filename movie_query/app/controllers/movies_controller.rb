@@ -30,9 +30,6 @@ class MoviesController < ApplicationController
   end
 
   def home
-    def intialize
-      @input = Input.new
-    end
 
 
 
