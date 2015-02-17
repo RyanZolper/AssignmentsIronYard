@@ -5,7 +5,9 @@ loop do puts "Would you like to create a blog? (y/n)"
   blogcreation = gets.chomp.downcase
   break if blogcreation == "n"
 
-  blog = Blog.new
+  print 'Please enter a blog name: '
+  name = gets.chomp
+  blog = Blog.new(name)
 
 
   puts "Enter your username: "
@@ -16,8 +18,9 @@ loop do puts "Would you like to create a blog? (y/n)"
     postcreation = gets.chomp.downcase
 
     break if postcreation == "n"
-    
-    post = Post.new
+    print 'Please enter a post title: '
+    title = gets.chomp
+    post = Post.new(title)
 
 
 
