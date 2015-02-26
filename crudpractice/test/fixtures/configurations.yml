@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: configurations
+#
+#  id         :integer          not null, primary key
+#  drivetrain :string
+#  body_style :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  car_id     :integer
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  drivetrain: MyString
+  body_style: MyString
+
+two:
+  drivetrain: MyString
+  body_style: MyString
